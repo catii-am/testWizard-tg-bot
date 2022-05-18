@@ -33,19 +33,16 @@ def com(message):
                 quest_text = driver.find_element(By.XPATH, '//*[@id="gooo"]/table/tbody/tr[1]/td/div/div').text
                 quest_num = driver.find_element(By.XPATH, '//*[@id="gooo"]/table/tbody/tr[1]/td/div/a/h2[2]').text
 
-                id = 1
                 complete = 0
                 ex_id = 0
 
                 if len(driver.find_elements(By.ID, 'r1')) > 0:
                     quest_1 = driver.find_element(By.ID, 'r1')
                     if quest_1.get_attribute('value') != '0' and complete == 0:
-                        # quest_otvet_1 = driver.find_element('//*[@id="r1"]').text
                         quest_otvet_1 = driver.find_element(By.XPATH, '//*[@id="gooo"]/table/tbody/tr[2]/td/table/tbody/tr[1]/td/div').text
                         bot.send_message(message.chat.id, f'{quest_num}\n{quest_text}\nОтвет №1: {quest_otvet_1}')
                         quest_1.click()
                         complete = 1
-                        print('1')
                 else:
                     ex_id += 1
 
@@ -57,7 +54,6 @@ def com(message):
                         bot.send_message(message.chat.id, f'{quest_num}\n{quest_text}\nОтвет №2: {quest_otvet_2}')
                         quest_2.click()
                         complete = 1
-                        print('2')
                 else:
                     ex_id += 1
 
@@ -69,7 +65,6 @@ def com(message):
                         bot.send_message(message.chat.id, f'{quest_num}\n{quest_text}\nОтвет №3: {quest_otvet_3}')
                         quest_3.click()
                         complete = 1
-                        print('3')
                 else:
                     ex_id += 1
 
@@ -81,7 +76,6 @@ def com(message):
                         bot.send_message(message.chat.id, f'{quest_num}\n{quest_text}\nОтвет №4: {quest_otvet_4}')
                         quest_4.click()
                         complete = 1
-                        print('4')
                 else:
                     ex_id += 1
 
@@ -93,7 +87,6 @@ def com(message):
                         bot.send_message(message.chat.id, f'{quest_num}\n{quest_text}\nОтвет №5: {quest_otvet_5}')
                         quest_5.click()
                         complete = 1
-                        print('5')
                 else:
                     ex_id += 1
 
@@ -105,7 +98,6 @@ def com(message):
                         bot.send_message(message.chat.id, f'{quest_num}\n{quest_text}\nОтвет №6: {quest_otvet_6}')
                         quest_6.click()
                         complete = 1
-                        print('6')
                 else:
                     ex_id += 1
 
@@ -117,7 +109,6 @@ def com(message):
                         bot.send_message(message.chat.id, f'{quest_num}\n{quest_text}\nОтвет №7: {quest_otvet_7}')
                         quest_7.click()
                         complete = 1
-                        print('7')
                 else:
                     ex_id += 1
 
@@ -128,7 +119,6 @@ def com(message):
                         bot.send_message(message.chat.id, f'{quest_num}\n{quest_text}\nОтвет №8: {quest_otvet_8}')
                         quest_8.click()
                         complete = 1
-                        print('8')
                 else:
                     ex_id += 1
 
@@ -139,7 +129,6 @@ def com(message):
                         bot.send_message(message.chat.id, f'{quest_num}\n{quest_text}\nОтвет №9: {quest_otvet_9}')
                         quest_9.click()
                         complete = 1
-                        print('9')
                 else:
                     ex_id += 1
 
@@ -150,7 +139,6 @@ def com(message):
                         bot.send_message(message.chat.id, f'{quest_num}\n{quest_text}\nОтвет №10: {quest_otvet_10}')
                         quest_10.click()
                         complete = 1
-                        print('10')
                 else:
                     ex_id += 1
 
